@@ -1,3 +1,3 @@
-# NC News Seeding
+# Jinson's News Server
 
-- Instructions for this sprint can be found at https://l2c.northcoders.com/courses/be/seeding-nc-news
+WIP
