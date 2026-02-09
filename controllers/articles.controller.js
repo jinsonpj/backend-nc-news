@@ -1,9 +1,22 @@
-const { selectArticles } = require("../models/articles.model");
+const {
+  fetchArticles,
+  fetchArticleById,
+} = require("../services/articles.service");
 
 exports.getArticles = (req, res, next) => {
-  selectArticles()
+  fetchArticles()
     .then((articles) => {
       res.status(200).send({ articles });
+    })
+    .catch(next);
+};
+
+exports.getArticleById = (req, res, next) => {
+  const { article_id } = req.params;
+
+  fetchArticleById(article_id)
+    .then((article) => {
+      res.status(200).send({ article });
     })
     .catch(next);
 };

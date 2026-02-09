@@ -1,9 +1,9 @@
-const { selectUsers } = require("../models/users.model");
+const { fetchUsers } = require("../services/users.service");
 
 exports.getUsers = (req, res, next) => {
-  selectUsers()
+  fetchUsers()
     .then((users) => {
-      res.status(200).send({ topics });
+      res.status(200).send({ users });
     })
     .catch(next);
 };
