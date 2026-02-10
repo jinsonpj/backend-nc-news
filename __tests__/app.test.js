@@ -57,13 +57,13 @@ describe("GET /api/users", () => {
   });
 });
 
-// describe("GET /api/invalid-path", () => {
-//   test("404: responds with an invalid path message", async () => {
-//     const res = await request(app).get("/api/invalid-path").expect(404);
+describe("GET /api/invalid-path", () => {
+  test("404: responds with an invalid path message", async () => {
+    const res = await request(app).get("/api/invalid-path").expect(404);
 
-//     expect(res.body).toEqual({ msg: "Invalid Path" });
-//   });
-// });
+    expect(res.body).toEqual({ msg: "Invalid Path" });
+  });
+});
 
 describe("Error Handling Tests", () => {
   describe("GET /notARoute", () => {
