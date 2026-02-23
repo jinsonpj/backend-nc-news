@@ -22,6 +22,8 @@
 
 // module.exports = db;
 
+//  Updated Version
+
 const { Pool } = require("pg");
 const path = require("path");
 
@@ -39,11 +41,14 @@ const config = {};
 
 if (ENV === "production") {
   config.connectionString = process.env.DATABASE_URL;
+  config.ssl = {
+    rejectUnauthorized: false,
+  };
   config.max = 2;
 }
 
 const db = new Pool(config);
 
-console.log(`Connected to ${process.env.PGDATABASE}`);
+console.log(`Connected in ${ENV} mode`);
 
 module.exports = db;
