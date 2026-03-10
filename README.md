@@ -36,7 +36,8 @@ DELETE	/api/comments/:comment_id	Delete a comment
 
 Clone the repository:
 
-git clone https://github.com/yourusername/nc-news-server.git
+git clone https://github.com/jinsonpj/backend-nc-news.git
+
 cd nc-news-server
 
 Install dependencies:
@@ -68,7 +69,7 @@ Node.js v18+
 PostgreSQL v12+
 
 **Related Frontend**
-The frontend application that consumes this API can be found here: https://github.com/yourusername/nc-news
+The frontend application that consumes this API can be found here: https://github.com/jinsonpj/nc-news
 
 **Author**
 Jinson
